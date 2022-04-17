@@ -30,38 +30,131 @@ class Price {
 
     }
 }
+class Attend{
+    void attendLesson(){
+        System.out.println("LESSON ATTENDED...");
+        System.out.println("write a short review on lesson that you attended.");
+        Scanner r=new Scanner(System.in);
+        String review = r.nextLine();
+        System.out.print("Rate the lesson out of 5: ");
+        int rating = r.nextInt();
 
+        
+    }
+}
 class LessonBook{
+    TimeTable t = new TimeTable();
     void booking(){
         Scanner o = new Scanner(System.in);
         System.out.println("ENTER A NUMBER TO BOOK RESPECTIVE LESSON: ");
         int bookLesson = o.nextInt();
 
         if (bookLesson==1){
-            Index.sYoga++;
+            if (Index.sYoga<4){
+                Index.sYoga++;
+                System.out.println("lesson Booked");
+                System.out.println("student "+Index.sYoga);
+
+            }
+            else{
+                System.out.println("SEATS FULL...");
+                t.selectTimeTable();
+
+            }
+
         }
         else if (bookLesson==2){
-            Index.sRunning++;
+            if (Index.sRunning<4){
+                Index.sRunning++;
+                System.out.println("lesson Booked");
+                System.out.println("student "+Index.sRunning);
+            }
+            else{
+                System.out.println("SEATS FULL...");
+                t.selectTimeTable();
+
+            }
 
         }
         else if (bookLesson==3){
-            Index.sBodyFit++;
+            if (Index.sBodyFit<4){
+                Index.sBodyFit++;
+                System.out.println("lesson Booked");
+                System.out.println("student "+Index.sBodyFit);
+            }
+            else{
+                System.out.println("SEATS FULL...");
+                t.selectTimeTable();
+
+            }
+
         }
         else if (bookLesson==4){
-            Index.sBodyBlitz++;
+            if (Index.sBodyBlitz<4){
+                Index.sBodyBlitz++;
+                System.out.println("lesson Booked");
+                System.out.println("student "+Index.sBodyBlitz);
+            }
+            else{
+                System.out.println("SEATS FULL...");
+                t.selectTimeTable();
+
+            }
 
         }
         else if (bookLesson==5){
-            Index.sAquacise++;
+            if (Index.sAquacise<4){
+                Index.sAquacise++;
+                System.out.println("lesson Booked");
+                System.out.println("student "+Index.sAquacise);
+            }
+            else{
+                System.out.println("SEATS FULL...");
+                t.selectTimeTable();
+
+            }
 
         }
         else if (bookLesson==6){
-            Index.sZumba++;
+            if (Index.sZumba<4){
+                Index.sZumba++;
+                System.out.println("lesson Booked");
+                System.out.println("student "+Index.sZumba);
+            }
+            else{
+                System.out.println("SEATS FULL...");
+                t.selectTimeTable();
+
+            }
 
         }
 
         else{
             System.out.println("WRONG INPUT!!!");
+        }
+
+
+        System.out.println("1: TO CHANGE BOOKING ");
+        System.out.println("2: TO BOOK LESSON ");
+        System.out.println("2: TO ATTEND LESSON ");
+        System.out.print("choose an option: ");
+        Scanner a = new Scanner(System.in);
+        int c=a.nextInt();
+        if (c==1){
+            System.out.println("change booking");
+
+        }
+        else if (c==2){
+            t.selectTimeTable();
+
+        }
+        else if(c==3){
+            Attend attend = new Attend();
+            attend.attendLesson();
+        }
+        else{
+            System.out.println("Wrong INPUT!!!");
+
         }
     }
 }
@@ -137,15 +230,15 @@ class TimeTable{
             System.out.println("EXERCISE "+(i+1)+"--> "+ execrcise[i]+" running in "+ timing[i]);
         }
 
-        Scanner o= new Scanner(System.in);
+        Scanner p= new Scanner(System.in);
 
-        System.out.println("press y yo book a lesson, and n to go to main menu: ");
-        String in = o.next();
-        if (in == "y"){
+        System.out.println("press y to book a lesson, and n to go to main menu: ");
+        char opt = p.next().charAt(0);
+        if (opt == 'y'){
             LessonBook b = new LessonBook();
             b.booking();
         }
-        else if(in == "n"){
+        else if(opt == 'n'){
             selectTimeTable();
         }
         else{
@@ -158,24 +251,26 @@ class TimeTable{
     void sunday(){
 
         System.out.println("* * * * * * SUNDAY LESSONS * * * * * *");
+        int a;
         for (int i=3; i<6; i++){
-            System.out.print("EXERCISE "+(i+1)+"--> "+ execrcise[i]+" in "+ timing[i]);
+            a=i-3;
+            System.out.println("EXERCISE "+(i+1)+"--> "+ execrcise[i]+" in "+ timing[a]);
 
         }
-        Scanner o= new Scanner(System.in);
+        Scanner p= new Scanner(System.in);
 
-        System.out.println("press y yo book a lesson, and n to go to main menu: ");
-        String in = o.next();
-        if (in == "y"){
+        System.out.println("press y to book a lesson, and n to go to main menu: ");
+        char opt = p.next().charAt(0);
+        if (opt == 'y'){
             LessonBook b = new LessonBook();
             b.booking();
         }
-        else if(in == "n"){
+        else if(opt == 'n'){
             selectTimeTable();
         }
         else{
             System.out.println("WRONG INPUT");
-            saturday();
+            sunday();
         }
     }
 
@@ -183,8 +278,8 @@ class TimeTable{
         Price p= new Price();
         Scanner op=new Scanner(System.in);
         System.out.print("enter y to see prices: ");
-        String in= o.next();
-        if (in=="y"){
+        char in= op.next().charAt(0);
+        if (in=='y'){
             p.prices();
         }
         for (int i=0; i<6; i++){
@@ -205,20 +300,20 @@ class TimeTable{
 
         }
 
-        Scanner opt= new Scanner(System.in);
+        Scanner ip= new Scanner(System.in);
 
-        System.out.println("press y yo book a lesson, and n to go to main menu: ");
-        String inp = o.next();
-        if (inp == "y"){
+        System.out.println("press y to book a lesson, and n to go to main menu: ");
+        char opt = ip.next().charAt(0);
+        if (opt == 'y'){
             LessonBook b = new LessonBook();
             b.booking();
         }
-        else if(inp == "n"){
+        else if(opt == 'n'){
             selectTimeTable();
         }
         else{
             System.out.println("WRONG INPUT");
-            saturday();
+            byName();
         }
 
 
