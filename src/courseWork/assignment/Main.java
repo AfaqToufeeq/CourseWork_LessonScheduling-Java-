@@ -1,6 +1,4 @@
-package com.company;
-
-import java.util.Scanner;
+package courseWork.assignment;
 
 
 class Price {
@@ -11,13 +9,13 @@ class Price {
     {
         for (int i=0; i<6; i++)
         {
-            System.out.println("PRICE OF "+ TimeTable.execrcise[i] + " is: "+ price[i]+"$");
+            System.out.println("PRICE OF "+ TimeTable.exercise[i] + " : "+ price[i]+"$");
         }
-
     }
 }
 
 public class Main {
+    static int studentI=-1;
 
     public static void main(String[] args) {
         // write your code here

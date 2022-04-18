@@ -1,4 +1,4 @@
-package com.company;
+package courseWork.assignment;
 
 import java.util.Scanner;
 
