@@ -15,12 +15,15 @@ class Price {
 }
 
 public class Main {
+
     static int studentI=-1;
 
     public static void main(String[] args) {
         // write your code here
         Index i = new Index();
         i.indexing();
+
+        System.out.println();
         TimeTable t = new TimeTable();
         t.selectTimeTable();
 

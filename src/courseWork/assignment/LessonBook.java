@@ -3,10 +3,16 @@ package courseWork.assignment;
 import java.sql.Time;
 import java.util.Scanner;
 
+import static courseWork.assignment.Index.a;
+import static courseWork.assignment.Index.bookedLessons;
+
 public class LessonBook {
+
+
     TimeTable t = new TimeTable();
     void booking()
     {
+
         Scanner o = new Scanner(System.in);
         System.out.println("ENTER A NUMBER TO BOOK RESPECTIVE LESSON: ");
         int bookLesson = o.nextInt();
@@ -16,7 +22,7 @@ public class LessonBook {
             if (bookLesson==1)
             {
                 if (Index.sYoga<4){
-                    if(Index.students[Index.a][2].equals("Yoga"))
+                    if(Index.students[a][2].equals("Yoga"))
                     {
                         System.out.println("Error-> You have already Booked it\n");
                         t.selectTimeTable();
@@ -24,8 +30,10 @@ public class LessonBook {
                     else{
                         Index.sYoga++;
                         System.out.println("Status: Booked");
-                        System.out.println("lesson Booked by "+Index.students[Index.a][1]+"\n");
-                        Index.students[Index.a][2]="Yoga";
+                        System.out.println("lesson Booked by "+Index.students[a][1]+"\n");
+                        Index.students[a][2]="Yoga";
+                        bookedLessons[a][0]=Index.students[a][1];
+                        bookedLessons[a][1]="Yoga";
                     }
 
 
@@ -39,7 +47,7 @@ public class LessonBook {
             }
             else if (bookLesson==2){
                 if (Index.sRunning<4){
-                    if(Index.students[Index.a][3].equals("RUNNING"))
+                    if(Index.students[a][3].equals("RUNNING"))
                     {
                         System.out.println("Error-> You have already Booked it\n");
                         t.selectTimeTable();
@@ -48,8 +56,10 @@ public class LessonBook {
                     {
                         Index.sRunning++;
                         System.out.println("Status: Booked");
-                        System.out.println("lesson Booked by "+Index.students[Index.a][1]);
-                        Index.students[Index.a][3]="RUNNING";
+                        System.out.println("lesson Booked by "+Index.students[a][1]);
+                        Index.students[a][3]="RUNNING";
+                        bookedLessons[a][0]=Index.students[a][1];
+                        bookedLessons[a][2]="RUNNING";
                     }
 
                 }
@@ -62,7 +72,7 @@ public class LessonBook {
             }
             else if (bookLesson==3){
                 if (Index.sBodyFit<4){
-                    if(Index.students[Index.a][4].equals("BODY FIT"))
+                    if(Index.students[a][4].equals("BODY FIT"))
                     {
                         System.out.println("Error-> You have already Booked it\n");
                         t.selectTimeTable();
@@ -71,8 +81,10 @@ public class LessonBook {
                     {
                         Index.sBodyFit++;
                         System.out.println("Status: Booked");
-                        System.out.println("lesson Booked by "+Index.students[Index.a][1]);
-                        Index.students[Index.a][4]="BODY FIT";
+                        System.out.println("lesson Booked by "+Index.students[a][1]);
+                        Index.students[a][4]="BODY FIT";
+                        bookedLessons[a][0]=Index.students[a][1];
+                        bookedLessons[a][3]="BODY FIT";
                     }
 
                 }
@@ -89,7 +101,7 @@ public class LessonBook {
         {
             if (bookLesson==4){
                 if (Index.sBodyBlitz<4){
-                    if(Index.students[Index.a][5].equals("BODY BLITZ"))
+                    if(Index.students[a][5].equals("BODY BLITZ"))
                     {
                         System.out.println("Error-> You have already Booked it\n");
                         t.selectTimeTable();
@@ -98,8 +110,10 @@ public class LessonBook {
                     {
                         Index.sBodyBlitz++;
                         System.out.println("Status: Booked");
-                        System.out.println("lesson Booked by "+Index.students[Index.a][1]);
-                        Index.students[Index.a][5]="BODY BLITZ";
+                        System.out.println("lesson Booked by "+Index.students[a][1]);
+                        Index.students[a][5]="BODY BLITZ";
+                        bookedLessons[a][0]=Index.students[a][1];
+                        bookedLessons[a][4]="BODY BLITZ";
                     }
 
                 }
@@ -112,7 +126,7 @@ public class LessonBook {
             }
             else if (bookLesson==5){
                 if (Index.sAquacise<4){
-                    if(Index.students[Index.a][6].equals("AQUACISE"))
+                    if(Index.students[a][6].equals("AQUACISE"))
                     {
                         System.out.println("Error-> You have already Booked it\n");
                         t.selectTimeTable();
@@ -120,8 +134,10 @@ public class LessonBook {
                    else {
                         Index.sAquacise++;
                         System.out.println("Status: Booked");
-                        System.out.println("lesson Booked by "+Index.students[Index.a][1]);
-                        Index.students[Index.a][6]="AQUACISE";
+                        System.out.println("lesson Booked by "+Index.students[a][1]);
+                        Index.students[a][6]="AQUACISE";
+                        bookedLessons[a][0]=Index.students[a][1];
+                        bookedLessons[a][5]="AQUACISE";
                     }
                 }
                 else{
@@ -133,7 +149,7 @@ public class LessonBook {
             }
             else if (bookLesson==6){
                 if (Index.sZumba<4){
-                    if(Index.students[Index.a][7].equals("ZUMBA"))
+                    if(Index.students[a][7].equals("ZUMBA"))
                     {
                         System.out.println("Error-> You have already Booked it\n");
                         t.selectTimeTable();
@@ -142,8 +158,10 @@ public class LessonBook {
                     {
                         Index.sZumba++;
                         System.out.println("Status: Booked");
-                        System.out.println("lesson Booked by "+Index.students[Index.a][1]);
-                        Index.students[Index.a][7]="ZUMBA";
+                        System.out.println("lesson Booked by "+Index.students[a][1]);
+                        Index.students[a][7]="ZUMBA";
+                        bookedLessons[a][0]=Index.students[a][1];
+                        bookedLessons[a][6]="ZUMBA";
                     }
                 }
                 else
