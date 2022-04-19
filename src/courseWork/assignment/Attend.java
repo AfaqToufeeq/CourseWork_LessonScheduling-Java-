@@ -24,8 +24,13 @@ public class Attend {
                }
                if(j!=0)
                {
-                   z++;
-                   System.out.println(z+": "+bookedLessons[i][j]);
+                   if(bookedLessons[i][j]!="null")
+                   {
+                       z++;
+                       System.out.println(z+": "+bookedLessons[i][j]);
+                   }
+
+
                }
            }
        }
@@ -48,53 +53,33 @@ public class Attend {
          reviewsLessons[Index.a][mm]=review;
          mm++;
 
-         System.out.print("Rate the lesson out of 5: ");
-         int rating = r.nextInt();
-         ratingLessons[a][0]=attendLessons[Index.a][0];
-         ratingLessons[Index.a][rr]= String.valueOf(rating);
-         rr++;
+         System.out.print("Rate the lesson out of 5: \n");
+//         System.out.println("1: DAY");
+            System.out.println("1: very dissatisfied");
+            System.out.println("2: dissatisfied");
+            System.out.println("3: Ok");
+            System.out.println("4: satisfied");
+            System.out.println("5: very satisfied");
+            while (true)
+            {
+                int rating = r.nextInt();
+                if(rating>0 && rating<6)
+                {
+                    ratingLessons[a][0]=attendLessons[Index.a][0];
+                    ratingLessons[Index.a][rr]= String.valueOf(rating);
+                    rr++;
 
-         System.out.println("Rating and Reviews Completed");
-         TimeTable t = new TimeTable();
-         t.selectTimeTable();
+                    System.out.println("Rating and Reviews Completed");
+                    TimeTable t = new TimeTable();
+                    t.selectTimeTable();
+                }
+                else {
+                    System.out.println("Try Again -> You can only rate out 5");
+                }
+            }
+
+
+
 
      }
-
-//    void selectToAttend()
-//    {
-//        while(true) {
-//            System.out.println("1: DAY");
-//            System.out.println("2: LESSON NAME");
-//            System.out.println("3: SEE PRICES");
-//            System.out.println("4: My TimeTable");
-//            System.out.println("5: Exit");
-//
-//            System.out.print("Choose an option: ");
-//            int option = o.nextInt();
-//            switch (option) {
-//                case 1:
-//                    System.out.println("\n*****TIMETABLE BY DAY*****");
-//                    byDay();
-//                    break;
-//
-//                case 2:
-//                    System.out.println("\n*****TIMETABLE BY NAME*****");
-//                    byName();
-//                    break;
-//                case 3:
-//                    p.prices();
-//                    break;
-//                case 4:
-//                    myTimeTable();
-//                    break;
-//                case 5:
-//                    System.exit(0);
-//                    break;
-//                default:
-//                    System.out.println("wrong input!!!");
-//
-//            }
-//        }
-//    }
-
 }

@@ -19,6 +19,7 @@ public class Index {
     static String[][] ratingLessons= new String[40][40];
 
     static int sYoga=0, sRunning=0, sBodyFit=0, sBodyBlitz=0, sAquacise=0, sZumba=0;
+
     public Index() {
 
     }
