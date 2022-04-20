@@ -76,7 +76,7 @@ public class monthlyReport {
             }
         }
         System.out.println();
-        System.out.println("******Four Weeks Report 1 (No.of Students/AverageRating)******");
+        System.out.println("******Monthly Report 1 (No.of Students/AverageRating)******");
        System.out.println("Total NO. of students in YOGA: "+YogaNo+"     \t--> Average Rating: "+sumYogaNo/YogaNo);
        System.out.println("Total NO. of students in RUNNING: "+RunningNo+" \t--> Average Rating: "+sumRunningNo/RunningNo);
        System.out.println("Total NO. of students in BODY FIT: "+BodyFitNo+" \t--> Average Rating: "+sumBodyFitNo/BodyFitNo);
@@ -84,8 +84,12 @@ public class monthlyReport {
        System.out.println("Total NO. of students in AQUACISE: "+AquaciseNo+" \t--> Average Rating: "+sumAquaciseNo/AquaciseNo);
        System.out.println("Total NO. of students in ZUMBA: "+ZumbaNo+"   \t--> Average Rating: "+sumZumbaNo/ZumbaNo);
         System.out.println();
-
         System.out.println();
+
+    }
+
+    void championExerciseReport()
+    {
         hiYogaNo=price[0]*YogaNo;
         hiRunningNo=price[1]*RunningNo;
         hiBodyFitNo=price[2]*BodyFitNo;
@@ -102,7 +106,7 @@ public class monthlyReport {
         income.add(hiZumbaNo);
         Integer max = Collections.max(income);
 
-        System.out.println("******Four Weeks Report 2 (Highest Income)******");
+        System.out.println("******Monthly Champion Exercise Report (Highest Income)******");
         System.out.println("Yoga Total Income Generated: "+hiYogaNo+"$");
         System.out.println("Yoga Total Income Generated: "+hiRunningNo+"$");
         System.out.println("Yoga Total Income Generated: "+hiBodyFitNo+"$");
@@ -123,24 +127,21 @@ public class monthlyReport {
         {
             System.out.println("-->> BODY FIT Lessons Generated the highest Income, almost "+hiBodyFitNo+"$");
         }
-       else if(max==hiBodyBlitzNo)
+        else if(max==hiBodyBlitzNo)
         {
             System.out.println("-->> BODY BLITZ Lessons Generated the highest Income, almost "+hiBodyBlitzNo+"$");
         }
-       else if(max==hiAquaciseNo)
+        else if(max==hiAquaciseNo)
         {
             System.out.println("-->> AQUACISE Lessons Generated the highest Income, almost "+hiAquaciseNo+"$");
         }
-       else if(max==hiZumbaNo)
+        else if(max==hiZumbaNo)
         {
             System.out.println("-->> ZUMBA Lessons Generated the highest Income, almost "+hiZumbaNo+"$");
         }
-       System.out.println();
-
-
-
-
+        System.out.println();
 
 
     }
 }
+

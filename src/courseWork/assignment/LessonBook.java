@@ -209,6 +209,8 @@ public class LessonBook {
         System.out.println("1: TO CHANGE BOOKING ");
         System.out.println("2: TO BOOK LESSON ");
         System.out.println("3: TO ATTEND LESSON ");
+        System.out.println("4: Monthly Lesson Report ");
+        System.out.println("5: Monthly Champion Exercise Report ");
         System.out.print("choose an option: ");
         Scanner a = new Scanner(System.in);
         int c=a.nextInt();
@@ -223,6 +225,14 @@ public class LessonBook {
         else if(c==3){
             Attend attend = new Attend();
             attend.attendLesson();
+        }
+        else if(c==4){
+            monthlyReport mR= new monthlyReport();
+            mR.fourWeeksReport();
+        }
+        else if(c==5){
+            monthlyReport mR2= new monthlyReport();
+            mR2.championExerciseReport();
         }
         else{
             System.out.println("Wrong INPUT!!!");

@@ -26,7 +26,8 @@ public class TimeTable {
             System.out.println("3: SEE PRICES");
             System.out.println("4: My TimeTable");
             System.out.println("5: Monthly Report");
-            System.out.println("6: Exit");
+            System.out.println("6: Monthly Champion Exercise Report");
+            System.out.println("7: Exit");
 
             System.out.print("Choose an option: ");
             int option = o.nextInt();
@@ -51,6 +52,10 @@ public class TimeTable {
                    mR.fourWeeksReport();
                     break;
                 case 6:
+                    monthlyReport mR2= new monthlyReport();
+                    mR2.championExerciseReport();
+                    break;
+                case 7:
                     System.exit(0);
                     break;
                 default:
