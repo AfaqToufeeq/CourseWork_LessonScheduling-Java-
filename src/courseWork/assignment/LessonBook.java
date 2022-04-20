@@ -174,7 +174,6 @@ public class LessonBook {
                 else{
                     System.out.println("SEATS FULL...");
                     t.selectTimeTable();
-
                 }
 
             }
