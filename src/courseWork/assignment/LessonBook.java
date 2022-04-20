@@ -16,31 +16,31 @@ public class LessonBook {
         Scanner o = new Scanner(System.in);
         System.out.println("ENTER A NUMBER TO BOOK RESPECTIVE LESSON: ");
         int bookLesson = o.nextInt();
-        for(int i=0;i<attendLessons.length;i++)
+        for(int i=0;i< bookedLessons.length;i++)
         {
-            for(int j=0;j<attendLessons[i].length;j++)
+            for(int j=0;j<bookedLessons[i].length;j++)
             {
-                if(attendLessons[i][j].equals("YOGA"))
+                if(bookedLessons[i][j].equals("YOGA"))
                 {
                     sYoga++;
                 }
-                if(attendLessons[i][j].equals("RUNNING"))
+                if(bookedLessons[i][j].equals("RUNNING"))
                 {
                     sRunning++;
                 }
-                if(attendLessons[i][j].equals("BODY FIT"))
+                if(bookedLessons[i][j].equals("BODY FIT"))
                 {
                     sBodyFit++;
                 }
-                if(attendLessons[i][j].equals("BODY BLITZ"))
+                if(bookedLessons[i][j].equals("BODY BLITZ"))
                 {
                     sBodyBlitz++;
                 }
-                if(attendLessons[i][j].equals("AQUACISE"))
+                if(bookedLessons[i][j].equals("AQUACISE"))
                 {
                     sAquacise++;
                 }
-                if(attendLessons[i][j].equals("ZUMBA"))
+                if(bookedLessons[i][j].equals("ZUMBA"))
                 {
                     sZumba++;
                 }
@@ -228,7 +228,7 @@ public class LessonBook {
         }
         else if(c==4){
             monthlyReport mR= new monthlyReport();
-            mR.fourWeeksReport();
+            mR.WeeksReport();
         }
         else if(c==5){
             monthlyReport mR2= new monthlyReport();

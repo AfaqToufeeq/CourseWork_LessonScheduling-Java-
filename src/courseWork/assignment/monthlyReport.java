@@ -1,7 +1,9 @@
 package courseWork.assignment;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 import static courseWork.assignment.Index.*;
 import static courseWork.assignment.Price.price;
@@ -10,9 +12,10 @@ public class monthlyReport {
     static int YogaNo=0, RunningNo=0, BodyFitNo=0, BodyBlitzNo=0, AquaciseNo=0, ZumbaNo=0;
     static int sumYogaNo=0, sumRunningNo=0, sumBodyFitNo=0, sumBodyBlitzNo=0, sumAquaciseNo=0, sumZumbaNo=0;
     static int hiYogaNo=0, hiRunningNo=0, hiBodyFitNo=0, hiBodyBlitzNo=0, hiAquaciseNo=0, hiZumbaNo=0;
+    Scanner o = new Scanner(System.in);
 
-    void fourWeeksReport()
-    {
+
+    void WeeksReport() {
 //        System.out.println("******Four Weeks Report******");
 //        for(int i=0;i<attendLessons.length;i++)
 //        {
@@ -37,6 +40,39 @@ public class monthlyReport {
 //        System.out.println();
 
 
+        while (true) {
+            System.out.println("1: Four Weeks Report");
+            System.out.println("2: Eight Weeks Report");
+            System.out.println("3: Main Menu");
+            System.out.println("4: Exit");
+
+            System.out.print("Choose an option: ");
+            int option = o.nextInt();
+            switch (option)
+            {
+                case 1:
+                    fourWeeksReport();
+                    break;
+                case 2:
+                    eightWeeksReport();
+                    break;
+                case 3:
+                    TimeTable t = new TimeTable();
+                    t.selectTimeTable();
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("wrong input!!!");
+
+            }
+
+        }
+    }
+
+    void fourWeeksReport()
+    {
         System.out.println("******Four Weeks Report******");
         for(int i=0;i<attendLessons.length;i++)
         {
@@ -85,6 +121,11 @@ public class monthlyReport {
        System.out.println("Total NO. of students in ZUMBA: "+ZumbaNo+"   \t--> Average Rating: "+sumZumbaNo/ZumbaNo);
         System.out.println();
         System.out.println();
+
+    }
+
+
+    void eightWeeksReport() {
 
     }
 

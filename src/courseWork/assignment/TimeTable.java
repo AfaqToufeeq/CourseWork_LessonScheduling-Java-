@@ -49,7 +49,7 @@ public class TimeTable {
                     break;
                 case 5:
                    monthlyReport mR= new monthlyReport();
-                   mR.fourWeeksReport();
+                   mR.WeeksReport();
                     break;
                 case 6:
                     monthlyReport mR2= new monthlyReport();
@@ -147,7 +147,6 @@ public class TimeTable {
             System.out.println("WRONG INPUT");
             saturday();
         }
-
 
     }
     void sunday(){

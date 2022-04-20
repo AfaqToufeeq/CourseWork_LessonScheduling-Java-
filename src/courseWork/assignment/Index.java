@@ -28,19 +28,19 @@ public class Index {
 //    static String[][] students= new String[20][20];
     static String[][] bookedLessons= {
         {"Rehan","YOGA", "RUNNING","null","null","null","null"},
-        {"Alex" ,"null","RUNNING", "BODY FIT","null","null","ZUMBA"},
+        {"Alex" ,"null","null", "BODY FIT","null","null","ZUMBA"},
         {"Jerry" ,"YOGA","null","null","BODY BLITZ", "AQUACISE","null"},
-        {"Malik","YOGA","RUNNING", "null","null","AQUACISE", "null"},
+        {"Malik","YOGA","RUNNING", "null","null","null", "null"},
         {"Peter","null","null","BODY FIT", "BODY BLITZ","null","null"},
         {"Sheikh","YOGA","null","null","BODY BLITZ", "null","ZUMBA"},
         {"Andrew","null","null","BODY FIT", "null","AQUACISE","null"},
         {"Katty","null","null","null","BODY BLITZ","null","ZUMBA"},
-        {"Sarah","null","null","BODY FIT","null", "AQUACISE","null"},
+        {"Sarah","null","null","null","null", "AQUACISE","null"},
         {"Yama","null","RUNNING","null","null","null","null"},
         {"null","null","null","null","null","null","null","null"}
     };
     static String[][] attendLessons=  {
-            {"Rehan","YOGA", "RUNNING"},
+            {"Rehan","YOGA", "RUNNING","YOGA"},
             {"Alex" ,"RUNNING", "BODY FIT","ZUMBA"},
             {"Jerry" ,"YOGA","BODY BLITZ", "AQUACISE"},
             {"Malik","YOGA","RUNNING"},
