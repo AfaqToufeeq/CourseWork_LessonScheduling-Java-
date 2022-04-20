@@ -71,8 +71,8 @@ public class LessonBook {
                 }
                 else{
                     System.out.println("SEATS FULL...");
+                    sYoga=0;sRunning=0;sBodyFit=0;sBodyBlitz=0; sAquacise=0; sZumba=0;
                     t.selectTimeTable();
-
                 }
 
             }
@@ -96,6 +96,7 @@ public class LessonBook {
                 }
                 else{
                     System.out.println("SEATS FULL...");
+                    sYoga=0;sRunning=0;sBodyFit=0;sBodyBlitz=0; sAquacise=0; sZumba=0;
                     t.selectTimeTable();
 
                 }
@@ -121,6 +122,7 @@ public class LessonBook {
                 }
                 else{
                     System.out.println("SEATS FULL...");
+                    sYoga=0;sRunning=0;sBodyFit=0;sBodyBlitz=0; sAquacise=0; sZumba=0;
                     t.selectTimeTable();
                 }
 
@@ -150,6 +152,7 @@ public class LessonBook {
                 }
                 else{
                     System.out.println("SEATS FULL...");
+                    sYoga=0;sRunning=0;sBodyFit=0;sBodyBlitz=0; sAquacise=0; sZumba=0;
                     t.selectTimeTable();
 
                 }
@@ -173,6 +176,7 @@ public class LessonBook {
                 }
                 else{
                     System.out.println("SEATS FULL...");
+                    sYoga=0;sRunning=0;sBodyFit=0;sBodyBlitz=0; sAquacise=0; sZumba=0;
                     t.selectTimeTable();
                 }
 
@@ -197,6 +201,7 @@ public class LessonBook {
                 else
                 {
                     System.out.println("SEATS FULL...");
+                    sYoga=0;sRunning=0;sBodyFit=0;sBodyBlitz=0; sAquacise=0; sZumba=0;
                     t.selectTimeTable();
                 }
             }

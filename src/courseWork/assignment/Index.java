@@ -42,9 +42,23 @@ public class Index {
     static String[][] attendLessons=  {
             {"Rehan","YOGA", "RUNNING","YOGA"},
             {"Alex" ,"RUNNING", "BODY FIT","ZUMBA"},
-            {"Jerry" ,"YOGA","BODY BLITZ", "AQUACISE"},
-            {"Malik","YOGA","RUNNING"},
-            {"Peter","BODY FIT", "BODY BLITZ"},
+            {"Jerry" ,"YOGA","BODY BLITZ", "AQUACISE","AQUACISE","YOGA","BODY BLITZ"},
+            {"Malik","YOGA","BODY BLITZ","YOGA"},
+            {"Peter","BODY FIT", "BODY BLITZ","BODY BLITZ"},
+            {"Sheikh","YOGA","ZUMBA"},
+            {"Andrew","BODY FIT","AQUACISE"},
+            {"Katty","BODY BLITZ","ZUMBA"},
+            {"Sarah","BODY FIT","AQUACISE"},
+            {"Yama","RUNNING"},
+            {"null","null","null","null","null","null","null","null"}
+    };
+
+    static String[][] attendLessonsEight=  {
+            {"Rehan","YOGA", "RUNNING","YOGA","YOGA", "RUNNING","YOGA"},
+            {"Alex" ,"RUNNING", "BODY FIT","ZUMBA"},
+            {"Jerry" ,"YOGA","BODY BLITZ", "AQUACISE","AQUACISE","YOGA","BODY BLITZ","YOGA","BODY BLITZ", "AQUACISE","AQUACISE","YOGA","BODY BLITZ"},
+            {"Malik","YOGA","BODY BLITZ","YOGA"},
+            {"Peter","BODY FIT", "BODY BLITZ","BODY BLITZ"},
             {"Sheikh","YOGA","ZUMBA"},
             {"Andrew","BODY FIT","AQUACISE"},
             {"Katty","BODY BLITZ","ZUMBA"},
@@ -54,11 +68,24 @@ public class Index {
     };
     static String[][] reviewsLessons= new String[40][40];
     static String[][] ratingLessons=  {
-            {"Rehan","5", "4"},
+            {"Rehan","5", "4","5"},
             {"Alex" ,"3", "2","1"},
-            {"Jerry" ,"3","5", "2"},
-            {"Malik","1","4"},
-            {"Peter","2", "5"},
+            {"Jerry" ,"3","5", "2","5","4","2"},
+            {"Malik","1","4","3"},
+            {"Peter","2", "5","3"},
+            {"Sheikh","3","3"},
+            {"Andrew","3","1"},
+            {"Katty","5","5"},
+            {"Sarah","5","3"},
+            {"Yama","4"},
+            {"null","null","null","null","null","null","null","null"}
+    };
+    static String[][] ratingLessonseight=  {
+            {"Rehan","5", "4","5","5", "4","5"},
+            {"Alex" ,"3", "2","1"},
+            {"Jerry" ,"3","5", "2","5","4","2","3","5", "2","5","4","2"},
+            {"Malik","1","4","3"},
+            {"Peter","2", "5","3"},
             {"Sheikh","3","3"},
             {"Andrew","3","1"},
             {"Katty","5","5"},
@@ -74,13 +101,7 @@ public class Index {
     }
 
     void indexing(){
-//                for(int i=0;i<students2.length;i++)
-//        {
-//            for(int j=0;j<students2[i].length;j++)
-//            {
-//                students[i][j]=students2[i][j];
-//            }
-//        }
+
        a= Main.studentI+=1;
        int z=a+1;
 
@@ -89,14 +110,6 @@ public class Index {
         students[a][0]="Student "+z;
         students[a][1]=s.nextLine();
 
-        for(int i=0;i<students.length;i++)
-        {
-            for(int j=0;j<students[i].length;j++)
-            {
-                System.out.println(students[i][j] +" ");
-            }
-            System.out.println();
-        }
 
         System.out.println(students[a][0]+" : "+students[a][1]);
         System.out.println();

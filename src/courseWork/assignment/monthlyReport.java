@@ -10,41 +10,18 @@ import static courseWork.assignment.Price.price;
 
 public class monthlyReport {
     static int YogaNo=0, RunningNo=0, BodyFitNo=0, BodyBlitzNo=0, AquaciseNo=0, ZumbaNo=0;
+    static int bookYogaNo=0, bookRunningNo=0, bookBodyFitNo=0, bookBodyBlitzNo=0, bookAquaciseNo=0, bookZumbaNo=0;
     static int sumYogaNo=0, sumRunningNo=0, sumBodyFitNo=0, sumBodyBlitzNo=0, sumAquaciseNo=0, sumZumbaNo=0;
     static int hiYogaNo=0, hiRunningNo=0, hiBodyFitNo=0, hiBodyBlitzNo=0, hiAquaciseNo=0, hiZumbaNo=0;
     Scanner o = new Scanner(System.in);
 
 
     void WeeksReport() {
-//        System.out.println("******Four Weeks Report******");
-//        for(int i=0;i<attendLessons.length;i++)
-//        {
-//            for(int j=0;j<attendLessons[i].length;j++)
-//            {
-//                if(j==0)
-//                {
-//                    System.out.println("Name: "+attendLessons[i][j]);
-//                }
-//
-//                if(attendLessons.length==0)
-//                {
-//                    System.out.println("Empty");
-//                }
-//                if(attendLessons[i][j]!="null" && j==1)
-//                {
-//                    System.out.println("Lesson : "+attendLessons[i][j]+"  -> Rating: "+ratingLessons[i][j]);
-//                }
-//
-//            }
-//        }
-//        System.out.println();
-
 
         while (true) {
             System.out.println("1: Four Weeks Report");
-            System.out.println("2: Eight Weeks Report");
-            System.out.println("3: Main Menu");
-            System.out.println("4: Exit");
+            System.out.println("2: Main Menu");
+            System.out.println("3: Exit");
 
             System.out.print("Choose an option: ");
             int option = o.nextInt();
@@ -54,13 +31,10 @@ public class monthlyReport {
                     fourWeeksReport();
                     break;
                 case 2:
-                    eightWeeksReport();
-                    break;
-                case 3:
                     TimeTable t = new TimeTable();
                     t.selectTimeTable();
                     break;
-                case 4:
+                case 3:
                     System.exit(0);
                     break;
                 default:
@@ -73,7 +47,7 @@ public class monthlyReport {
 
     void fourWeeksReport()
     {
-        System.out.println("******Four Weeks Report******");
+        System.out.println("******Four Weekends Report******");
         for(int i=0;i<attendLessons.length;i++)
         {
             for(int j=0;j<attendLessons[i].length;j++)
@@ -111,23 +85,52 @@ public class monthlyReport {
 
             }
         }
+
+        for(int i=0;i< bookedLessons.length;i++)
+        {
+            for(int j=0;j<bookedLessons[i].length;j++)
+            {
+                if(bookedLessons[i][j].equals("YOGA"))
+                {
+                    bookYogaNo++;
+                }
+                if(bookedLessons[i][j].equals("RUNNING"))
+                {
+                    bookRunningNo++;
+                }
+                if(bookedLessons[i][j].equals("BODY FIT"))
+                {
+                    bookBodyFitNo++;
+                }
+                if(bookedLessons[i][j].equals("BODY BLITZ"))
+                {
+                    bookBodyBlitzNo++;
+                }
+                if(bookedLessons[i][j].equals("AQUACISE"))
+                {
+                    bookAquaciseNo++;
+                }
+                if(bookedLessons[i][j].equals("ZUMBA"))
+                {
+                    bookZumbaNo++;
+                }
+
+            }
+        }
         System.out.println();
         System.out.println("******Monthly Report 1 (No.of Students/AverageRating)******");
-       System.out.println("Total NO. of students in YOGA: "+YogaNo+"     \t--> Average Rating: "+sumYogaNo/YogaNo);
-       System.out.println("Total NO. of students in RUNNING: "+RunningNo+" \t--> Average Rating: "+sumRunningNo/RunningNo);
-       System.out.println("Total NO. of students in BODY FIT: "+BodyFitNo+" \t--> Average Rating: "+sumBodyFitNo/BodyFitNo);
-       System.out.println("Total NO. of students in BODY BLITZ: "+BodyBlitzNo+" \t--> Average Rating: "+sumBodyBlitzNo/BodyBlitzNo);
-       System.out.println("Total NO. of students in AQUACISE: "+AquaciseNo+" \t--> Average Rating: "+sumAquaciseNo/AquaciseNo);
-       System.out.println("Total NO. of students in ZUMBA: "+ZumbaNo+"   \t--> Average Rating: "+sumZumbaNo/ZumbaNo);
+       System.out.println("Total NO. of students in YOGA: "+bookYogaNo+"        \t--> Attend Lessons: "+YogaNo+"     \t--> Average Rating: "+sumYogaNo/YogaNo);
+       System.out.println("Total NO. of students in RUNNING: "+bookRunningNo+"     \t--> Attend Lessons: "+RunningNo+"   \t--> Average Rating: "+sumRunningNo/RunningNo);
+       System.out.println("Total NO. of students in BODY FIT: "+bookBodyFitNo+"     \t--> Attend Lessons: "+BodyFitNo+"   \t--> Average Rating: "+sumBodyFitNo/BodyFitNo);
+       System.out.println("Total NO. of students in BODY BLITZ: "+bookBodyBlitzNo+"     \t--> Attend Lessons: "+BodyBlitzNo+"   \t--> Average Rating: "+sumBodyBlitzNo/BodyBlitzNo);
+       System.out.println("Total NO. of students in AQUACISE: "+bookAquaciseNo+"     \t--> Attend Lessons: "+AquaciseNo+"   \t--> Average Rating: "+sumAquaciseNo/AquaciseNo);
+       System.out.println("Total NO. of students in ZUMBA: "+bookZumbaNo+"       \t--> Attend Lessons: "+ZumbaNo+"   \t--> Average Rating: "+sumZumbaNo/ZumbaNo);
+
         System.out.println();
         System.out.println();
 
     }
 
-
-    void eightWeeksReport() {
-
-    }
 
     void championExerciseReport()
     {
