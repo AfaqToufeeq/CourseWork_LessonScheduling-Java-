@@ -3,8 +3,8 @@ package courseWork.assignment;
 import java.sql.Time;
 import java.util.Scanner;
 
-import static courseWork.assignment.Index.a;
-import static courseWork.assignment.Index.bookedLessons;
+import static courseWork.assignment.Index.*;
+import static courseWork.assignment.Index.attendLessons;
 
 public class LessonBook {
 
@@ -16,6 +16,37 @@ public class LessonBook {
         Scanner o = new Scanner(System.in);
         System.out.println("ENTER A NUMBER TO BOOK RESPECTIVE LESSON: ");
         int bookLesson = o.nextInt();
+        for(int i=0;i<attendLessons.length;i++)
+        {
+            for(int j=0;j<attendLessons[i].length;j++)
+            {
+                if(attendLessons[i][j].equals("YOGA"))
+                {
+                    sYoga++;
+                }
+                if(attendLessons[i][j].equals("RUNNING"))
+                {
+                    sRunning++;
+                }
+                if(attendLessons[i][j].equals("BODY FIT"))
+                {
+                    sBodyFit++;
+                }
+                if(attendLessons[i][j].equals("BODY BLITZ"))
+                {
+                    sBodyBlitz++;
+                }
+                if(attendLessons[i][j].equals("AQUACISE"))
+                {
+                    sAquacise++;
+                }
+                if(attendLessons[i][j].equals("ZUMBA"))
+                {
+                    sZumba++;
+                }
+
+            }
+        }
 
         if(TimeTable.selectDay==1)
         {
