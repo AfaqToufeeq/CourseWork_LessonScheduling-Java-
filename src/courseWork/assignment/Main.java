@@ -16,7 +16,7 @@ class Price {
 
 public class Main {
 
-    static int studentI=-1;
+    static int studentI=9;
 
     public static void main(String[] args) {
         // write your code here

@@ -6,7 +6,7 @@ import static courseWork.assignment.Index.*;
 
 
 public class Attend {
-    static int mm=0,nn=0,rr=0;
+    static int mm=1,nn=1,rr=1;
 
     Scanner r=new Scanner(System.in);
     void attendLesson(){
@@ -15,9 +15,9 @@ public class Attend {
 
     void myBookedLessons() {
         int z=0;
-       for (int i=0;i<1;i++)
+       for (int i=a;i<a+1;i++)
        {
-           for(int j=0;j<bookedLessons.length;j++)
+           for(int j=0;j<bookedLessons[i].length;j++)
            {
                if(j==0){
                    System.out.println("Lessons Booked by Mr."+bookedLessons[i][j]+" are:");
@@ -34,11 +34,12 @@ public class Attend {
                }
            }
        }
+
         System.out.println("Enter A Lesson Name TO ATTEND IT (BODY BLITZ):");
 
        String a=r.nextLine();
        attendLessons[Index.a][0]=bookedLessons[Index.a][0];
-       attendLessons[Index.a][nn]=a;
+       attendLessons[Index.a][nn]=a.toUpperCase();
        nn++;
        System.out.println("Status: Attended");
        myReviews();

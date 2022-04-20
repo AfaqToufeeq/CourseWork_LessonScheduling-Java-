@@ -2,8 +2,7 @@ package courseWork.assignment;
 
 import java.util.Scanner;
 
-import static courseWork.assignment.Index.a;
-import static courseWork.assignment.Index.students;
+import static courseWork.assignment.Index.*;
 
 public class TimeTable {
     static int selectDay=0;
@@ -62,9 +61,9 @@ public class TimeTable {
     }
 
    void myTimeTable() {
-        for(int i=0;i<1;i++)
+        for(int i=0;i< students.length;i++)
         {
-            for(int j=0;j<8;j++)
+            for(int j=0;j<students[i].length;j++)
             {
 
                 if(j==0)
@@ -78,7 +77,7 @@ public class TimeTable {
                 }
                 if(j==1)
                 {
-                    System.out.println("********Lessons Booked********");
+                    System.out.println("---> Lessons Booked <---");
                 }
 
             }
