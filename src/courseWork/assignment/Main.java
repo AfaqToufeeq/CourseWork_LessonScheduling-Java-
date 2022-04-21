@@ -1,6 +1,9 @@
 package courseWork.assignment;
 
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 class Price {
@@ -25,6 +28,7 @@ public class Main {
         // write your code here
         System.out.println("\n\n********Management System********");
         System.out.println("\n********Select the Option********");
+
         while(true) {
             System.out.println("1: TimeTable");
             System.out.println("2: Monthly Report");
@@ -59,8 +63,6 @@ public class Main {
 
             }
         }
-
-
 
     }
 }

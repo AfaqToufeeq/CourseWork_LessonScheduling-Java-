@@ -1,6 +1,9 @@
 package courseWork.assignment;
 
 import java.sql.Time;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 import static courseWork.assignment.Index.*;
@@ -12,7 +15,6 @@ public class LessonBook {
     TimeTable t = new TimeTable();
     void booking()
     {
-
         Scanner o = new Scanner(System.in);
         System.out.println("ENTER A NUMBER TO BOOK RESPECTIVE LESSON: ");
         int bookLesson = o.nextInt();
@@ -58,11 +60,25 @@ public class LessonBook {
                     }
                     else{
                         Index.sYoga++;
+                        Random r = new Random();
+                        List<Integer> codes = new ArrayList<>();
+                        for (int i = 0; i < 10; i++)
+                        {
+                            int x = r.nextInt(9999);
+                            while (codes.contains(x))
+                                x = r.nextInt(9999);
+                            codes.add(x);
+                        }
+                        String orderNo = String.format("%04d", codes.get(0));
+
                         System.out.println("Status: Booked");
                         System.out.println("lesson Booked by "+Index.students[a][1]+"\n");
                         Index.students[a][2]="Yoga";
                         bookedLessons[a][0]=Index.students[a][1];
                         bookedLessons[a][1]="Yoga";
+                        bookedLessonsID[a][0]= students[a][1];
+                        bookedLessonsID[a][1]=orderNo;
+
                     }
 
 
@@ -84,11 +100,25 @@ public class LessonBook {
                     else
                     {
                         Index.sRunning++;
+                        Random r = new Random();
+                        List<Integer> codes = new ArrayList<>();
+                        for (int i = 0; i < 10; i++)
+                        {
+                            int x = r.nextInt(9999);
+                            while (codes.contains(x))
+                                x = r.nextInt(9999);
+                            codes.add(x);
+                        }
+                        String orderNo = String.format("%04d", codes.get(0));
+
+
                         System.out.println("Status: Booked");
                         System.out.println("lesson Booked by "+Index.students[a][1]);
                         Index.students[a][3]="RUNNING";
                         bookedLessons[a][0]=Index.students[a][1];
                         bookedLessons[a][2]="RUNNING";
+                        bookedLessonsID[a][0]= students[a][1];
+                        bookedLessonsID[a][2]=orderNo;
                     }
 
                 }
@@ -110,11 +140,24 @@ public class LessonBook {
                     else
                     {
                         Index.sBodyFit++;
+                        Random r = new Random();
+                        List<Integer> codes = new ArrayList<>();
+                        for (int i = 0; i < 10; i++)
+                        {
+                            int x = r.nextInt(9999);
+                            while (codes.contains(x))
+                                x = r.nextInt(9999);
+                            codes.add(x);
+                        }
+                        String orderNo = String.format("%04d", codes.get(0));
+
                         System.out.println("Status: Booked");
                         System.out.println("lesson Booked by "+Index.students[a][1]);
                         Index.students[a][4]="BODY FIT";
                         bookedLessons[a][0]=Index.students[a][1];
                         bookedLessons[a][3]="BODY FIT";
+                        bookedLessonsID[a][0]= students[a][1];
+                        bookedLessonsID[a][3]=orderNo;
                     }
 
                 }
@@ -137,11 +180,23 @@ public class LessonBook {
                     else
                     {
                         Index.sBodyBlitz++;
+                        Random r = new Random();
+                        List<Integer> codes = new ArrayList<>();
+                        for (int i = 0; i < 10; i++)
+                        {
+                            int x = r.nextInt(9999);
+                            while (codes.contains(x))
+                                x = r.nextInt(9999);
+                            codes.add(x);
+                        }
+                        String orderNo = String.format("%04d", codes.get(0));
                         System.out.println("Status: Booked");
                         System.out.println("lesson Booked by "+Index.students[a][1]);
                         Index.students[a][5]="BODY BLITZ";
                         bookedLessons[a][0]=Index.students[a][1];
                         bookedLessons[a][4]="BODY BLITZ";
+                        bookedLessonsID[a][0]= students[a][1];
+                        bookedLessonsID[a][4]=orderNo;
                     }
 
                 }
@@ -162,11 +217,23 @@ public class LessonBook {
                     }
                    else {
                         Index.sAquacise++;
+                        Random r = new Random();
+                        List<Integer> codes = new ArrayList<>();
+                        for (int i = 0; i < 10; i++)
+                        {
+                            int x = r.nextInt(9999);
+                            while (codes.contains(x))
+                                x = r.nextInt(9999);
+                            codes.add(x);
+                        }
+                        String orderNo = String.format("%04d", codes.get(0));
                         System.out.println("Status: Booked");
                         System.out.println("lesson Booked by "+Index.students[a][1]);
                         Index.students[a][6]="AQUACISE";
                         bookedLessons[a][0]=Index.students[a][1];
                         bookedLessons[a][5]="AQUACISE";
+                        bookedLessonsID[a][0]= students[a][1];
+                        bookedLessonsID[a][5]=orderNo;
                     }
                 }
                 else{
@@ -186,11 +253,23 @@ public class LessonBook {
                     else
                     {
                         Index.sZumba++;
+                        Random r = new Random();
+                        List<Integer> codes = new ArrayList<>();
+                        for (int i = 0; i < 10; i++)
+                        {
+                            int x = r.nextInt(9999);
+                            while (codes.contains(x))
+                                x = r.nextInt(9999);
+                            codes.add(x);
+                        }
+                        String orderNo = String.format("%04d", codes.get(0));
                         System.out.println("Status: Booked");
                         System.out.println("lesson Booked by "+Index.students[a][1]);
                         Index.students[a][7]="ZUMBA";
                         bookedLessons[a][0]=Index.students[a][1];
                         bookedLessons[a][6]="ZUMBA";
+                        bookedLessonsID[a][0]= students[a][1];
+                        bookedLessonsID[a][6]=orderNo;
                     }
                 }
                 else

@@ -164,13 +164,6 @@ public class TimeTable {
     }
 
     void byName(){
-        Price p= new Price();
-        Scanner op=new Scanner(System.in);
-        System.out.print("enter y to see prices: ");
-        char in= op.next().charAt(0);
-        if (in=='y'){
-            p.prices();
-        }
         for (int i=0; i<6; i++){
             System.out.println((i+1)+": "+ TimeTable.exercise[i]);
         }
