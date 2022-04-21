@@ -71,8 +71,9 @@ public class Attend {
                     rr++;
 
                     System.out.println("Rating and Reviews Completed");
-                    TimeTable t = new TimeTable();
-                    t.selectTimeTable();
+                    LessonBook lessonBook = new LessonBook();
+                    lessonBook.mainMenuAttend();
+
                 }
                 else {
                     System.out.println("Try Again -> You can only rate out 5");

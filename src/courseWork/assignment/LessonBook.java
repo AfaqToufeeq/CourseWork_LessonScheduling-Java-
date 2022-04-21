@@ -48,8 +48,6 @@ public class LessonBook {
             }
         }
 
-        if(TimeTable.selectDay==1)
-        {
             if (bookLesson==1)
             {
                 if (Index.sYoga<4){
@@ -128,10 +126,7 @@ public class LessonBook {
 
             }
 
-        }
 
-        else if(TimeTable.selectDay ==2)
-        {
             if (bookLesson==4){
                 if (Index.sBodyBlitz<4){
                     if(Index.students[a][5].equals("BODY BLITZ"))
@@ -205,23 +200,29 @@ public class LessonBook {
                     t.selectTimeTable();
                 }
             }
-        }
-        else
-        {
-            System.out.println("WRONG INPUT!!!");
-        }
+//
+//        else
+//        {
+//            System.out.println("WRONG INPUT!!!");
+//        }
+        mainMenuAttend();
 
+    }
+
+    void mainMenuAttend()
+    {
         System.out.println("1: TO CHANGE BOOKING ");
         System.out.println("2: TO BOOK LESSON ");
         System.out.println("3: TO ATTEND LESSON ");
         System.out.println("4: Monthly Lesson Report ");
         System.out.println("5: Monthly Champion Exercise Report ");
+        System.out.println("6: Exit ");
         System.out.print("choose an option: ");
         Scanner a = new Scanner(System.in);
         int c=a.nextInt();
         if (c==1){
-            System.out.println("change booking");
-
+           changeBooking changebook= new changeBooking();
+           changebook.changeBookingLesson();
         }
         else if (c==2){
             t.selectTimeTable();
@@ -238,6 +239,9 @@ public class LessonBook {
         else if(c==5){
             monthlyReport mR2= new monthlyReport();
             mR2.championExerciseReport();
+        }
+        else if(c==6){
+           System.exit(0);
         }
         else{
             System.out.println("Wrong INPUT!!!");

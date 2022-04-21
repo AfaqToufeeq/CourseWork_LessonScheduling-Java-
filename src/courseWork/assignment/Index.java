@@ -7,7 +7,7 @@ public class Index {
     //ALL DATAHOLDERS THAT WOULD USE IN PROJECT
     static int a;
     static String[][] lessons= {
-            {"1", "2", "3","4","5","6"},
+            {"YG10", "RUN206", "KT301","KT402","AQU52","ZU622"},
             {"YOGA", "RUNNING", "BODY FIT", "BODY BLITZ", "AQUACISE", "ZUMBA"},
             {"30", "10", "20", "15", "25", "30"}
     };
@@ -39,6 +39,20 @@ public class Index {
         {"Yama","null","RUNNING","null","null","null","null"},
         {"null","null","null","null","null","null","null","null"}
     };
+
+    static String [][] bookedLessonsID={
+            {"Rehan","5465", "4522","null","null","null","null"},
+            {"Alex" ,"null","null", "5555","null","null","8462"},
+            {"Jerry" ,"9322","null","null","4544", "8709","null"},
+            {"Malik","8988","8984", "null","null","null", "null"},
+            {"Peter","null","null","3699", "2544","null","null"},
+            {"Sheikh","1322","null","null","7945", "null","3328"},
+            {"Andrew","null","null","8794", "null","4845","null"},
+            {"Katty","null","null","null","3694","null","6456"},
+            {"Sarah","null","null","null","null", "5454","null"},
+            {"Yama","null","2130","null","null","null","null"},
+            {"null","null","null","null","null","null","null","null"}
+    };
     static String[][] attendLessons=  {
             {"Rehan","YOGA", "RUNNING","YOGA"},
             {"Alex" ,"RUNNING", "BODY FIT","ZUMBA"},
@@ -53,19 +67,7 @@ public class Index {
             {"null","null","null","null","null","null","null","null"}
     };
 
-    static String[][] attendLessonsEight=  {
-            {"Rehan","YOGA", "RUNNING","YOGA","YOGA", "RUNNING","YOGA"},
-            {"Alex" ,"RUNNING", "BODY FIT","ZUMBA"},
-            {"Jerry" ,"YOGA","BODY BLITZ", "AQUACISE","AQUACISE","YOGA","BODY BLITZ","YOGA","BODY BLITZ", "AQUACISE","AQUACISE","YOGA","BODY BLITZ"},
-            {"Malik","YOGA","BODY BLITZ","YOGA"},
-            {"Peter","BODY FIT", "BODY BLITZ","BODY BLITZ"},
-            {"Sheikh","YOGA","ZUMBA"},
-            {"Andrew","BODY FIT","AQUACISE"},
-            {"Katty","BODY BLITZ","ZUMBA"},
-            {"Sarah","BODY FIT","AQUACISE"},
-            {"Yama","RUNNING"},
-            {"null","null","null","null","null","null","null","null"}
-    };
+
     static String[][] reviewsLessons= new String[40][40];
     static String[][] ratingLessons=  {
             {"Rehan","5", "4","5"},
@@ -80,19 +82,7 @@ public class Index {
             {"Yama","4"},
             {"null","null","null","null","null","null","null","null"}
     };
-    static String[][] ratingLessonseight=  {
-            {"Rehan","5", "4","5","5", "4","5"},
-            {"Alex" ,"3", "2","1"},
-            {"Jerry" ,"3","5", "2","5","4","2","3","5", "2","5","4","2"},
-            {"Malik","1","4","3"},
-            {"Peter","2", "5","3"},
-            {"Sheikh","3","3"},
-            {"Andrew","3","1"},
-            {"Katty","5","5"},
-            {"Sarah","5","3"},
-            {"Yama","4"},
-            {"null","null","null","null","null","null","null","null"}
-    };
+
 
     static int sYoga=0, sRunning=0, sBodyFit=0, sBodyBlitz=0, sAquacise=0, sZumba=0;
 
@@ -109,7 +99,6 @@ public class Index {
         System.out.print("ENTER YOUR NAME: ");
         students[a][0]="Student "+z;
         students[a][1]=s.nextLine();
-
 
         System.out.println(students[a][0]+" : "+students[a][1]);
         System.out.println();

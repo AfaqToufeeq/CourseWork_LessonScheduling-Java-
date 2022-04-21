@@ -179,13 +179,13 @@ public class TimeTable {
         int exercise_opt= o.nextInt();
         if(exercise_opt==1 || exercise_opt==2 || exercise_opt==3)
         {
-            System.out.println("Lessons on "+ TimeTable.exercise[exercise_opt]+ " Every Saturday in "+timing[exercise_opt]);
+            System.out.println("Lessons on "+ TimeTable.exercise[exercise_opt-1]+ " Every Saturday in "+timing[exercise_opt-1]);
         }
 
         if(exercise_opt==4 || exercise_opt==5 || exercise_opt==6){
             int a=exercise_opt-4;
 
-            System.out.println("Lessons on "+ TimeTable.exercise[exercise_opt]+ " Every Sunday in "+timing[a]);
+            System.out.println("Lessons on "+ TimeTable.exercise[exercise_opt-1]+ " Every Sunday in "+timing[a]);
         }
         Scanner ip= new Scanner(System.in);
 
