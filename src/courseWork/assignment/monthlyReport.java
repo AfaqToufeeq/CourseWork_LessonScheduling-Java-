@@ -134,6 +134,43 @@ public class monthlyReport {
 
     void championExerciseReport()
     {
+        for(int i=0;i<attendLessons.length;i++)
+        {
+            for(int j=0;j<attendLessons[i].length;j++)
+            {
+                if(attendLessons[i][j].equals("YOGA"))
+                {
+                    sumYogaNo+=Integer.parseInt(ratingLessons[i][j]);
+                    YogaNo++;
+                }
+                if(attendLessons[i][j].equals("RUNNING"))
+                {
+                    sumRunningNo+=Integer.parseInt(ratingLessons[i][j]);
+                    RunningNo++;
+                }
+                if(attendLessons[i][j].equals("BODY FIT"))
+                {
+                    sumBodyFitNo+=Integer.parseInt(ratingLessons[i][j]);
+                    BodyFitNo++;
+                }
+                if(attendLessons[i][j].equals("BODY BLITZ"))
+                {
+                    sumBodyBlitzNo+=Integer.parseInt(ratingLessons[i][j]);
+                    BodyBlitzNo++;
+                }
+                if(attendLessons[i][j].equals("AQUACISE"))
+                {
+                    sumAquaciseNo+=Integer.parseInt(ratingLessons[i][j]);
+                    AquaciseNo++;
+                }
+                if(attendLessons[i][j].equals("ZUMBA"))
+                {
+                    sumZumbaNo+=Integer.parseInt(ratingLessons[i][j]);
+                    ZumbaNo++;
+                }
+
+            }
+        }
         hiYogaNo=price[0]*YogaNo;
         hiRunningNo=price[1]*RunningNo;
         hiBodyFitNo=price[2]*BodyFitNo;
@@ -152,11 +189,11 @@ public class monthlyReport {
 
         System.out.println("******Monthly Champion Exercise Report (Highest Income)******");
         System.out.println("Yoga Total Income Generated: "+hiYogaNo+"$");
-        System.out.println("Yoga Total Income Generated: "+hiRunningNo+"$");
-        System.out.println("Yoga Total Income Generated: "+hiBodyFitNo+"$");
-        System.out.println("Yoga Total Income Generated: "+hiBodyBlitzNo+"$");
-        System.out.println("Yoga Total Income Generated: "+hiAquaciseNo+"$");
-        System.out.println("Yoga Total Income Generated: "+hiZumbaNo+"$");
+        System.out.println("RUNNING Total Income Generated: "+hiRunningNo+"$");
+        System.out.println("BODY FIT Total Income Generated: "+hiBodyFitNo+"$");
+        System.out.println("BODY BLITZ Total Income Generated: "+hiBodyBlitzNo+"$");
+        System.out.println("AQUACISE Total Income Generated: "+hiAquaciseNo+"$");
+        System.out.println("ZUMBA Total Income Generated: "+hiZumbaNo+"$");
         System.out.println();
         System.out.println("******The Highest Income******");
         if(max==hiYogaNo)

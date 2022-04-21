@@ -67,8 +67,8 @@ public class Index {
             {"null","null","null","null","null","null","null","null"}
     };
 
-
     static String[][] reviewsLessons= new String[40][40];
+
     static String[][] ratingLessons=  {
             {"Rehan","5", "4","5"},
             {"Alex" ,"3", "2","1"},
