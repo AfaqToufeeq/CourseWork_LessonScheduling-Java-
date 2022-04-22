@@ -6,12 +6,6 @@ public class Index {
 
     //ALL DATAHOLDERS THAT WOULD USE IN PROJECT
     static int a;
-    static String[][] lessons= {
-            {"YG10", "RUN206", "KT301","KT402","AQU52","ZU622"},
-            {"YOGA", "RUNNING", "BODY FIT", "BODY BLITZ", "AQUACISE", "ZUMBA"},
-            {"30", "10", "20", "15", "25", "30"}
-    };
-
     static String[][] students = {
             {"Student 1","Rehan","YOGA", "RUNNING","null","null","null","null"},
             {"Student 2","Alex" ,"null","null", "BODY FIT","null","null","ZUMBA"},
@@ -53,6 +47,8 @@ public class Index {
             {"Yama","null","2130","null","null","null","null"},
             {"null","null","null","null","null","null","null","null"}
     };
+
+
     static String[][] attendLessons=  {
             {"Rehan","YOGA", "RUNNING","YOGA"},
             {"Alex" ,"RUNNING", "BODY FIT","ZUMBA"},
@@ -83,14 +79,13 @@ public class Index {
             {"null","null","null","null","null","null","null","null"}
     };
 
-
     static int sYoga=0, sRunning=0, sBodyFit=0, sBodyBlitz=0, sAquacise=0, sZumba=0;
 
     public Index() {
 
     }
 
-    void indexing(){
+    static void indexing(){
 
        a= Main.studentI+=1;
        int z=a+1;

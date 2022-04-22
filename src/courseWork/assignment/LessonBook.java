@@ -305,7 +305,6 @@ public class LessonBook {
         }
         else if (c==2){
             t.selectTimeTable();
-
         }
         else if(c==3){
             Attend attend = new Attend();

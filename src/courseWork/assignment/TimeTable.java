@@ -51,7 +51,7 @@ public class TimeTable {
         }
     }
 
-   void myTimeTable() {
+   static void myTimeTable() {
         for(int i=0;i< students.length;i++)
         {
             for(int j=0;j<students[i].length;j++)
@@ -69,6 +69,27 @@ public class TimeTable {
                 if(j==1)
                 {
                     System.out.println("---> Lessons Booked <---");
+                }
+
+            }
+        }
+        System.out.println();
+
+    }
+    static void myAttendLessons() {
+        for(int i=0;i<attendLessons.length;i++)
+        {
+            for(int j=0;j<attendLessons[i].length;j++)
+            {
+
+                if(j==0)
+                {
+                    System.out.println("********Attend Lessons By********");
+                    System.out.print("Name: ");
+                }
+                if(!attendLessons[i][j].equals("null"))
+                {
+                    System.out.println(attendLessons[i][j]);
                 }
 
             }

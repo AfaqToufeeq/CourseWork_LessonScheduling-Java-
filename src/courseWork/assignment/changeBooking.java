@@ -60,7 +60,6 @@ public class changeBooking {
                         System.out.println(z+": "+bookedLessonsID[i][j]+" : "+bookedLessons[i][j]);
                     }
 
-
                 }
             }
         }

@@ -9,12 +9,8 @@ import static courseWork.assignment.Index.*;
 import static courseWork.assignment.Price.price;
 
 public class monthlyReport {
-    static int YogaNo=0, RunningNo=0, BodyFitNo=0, BodyBlitzNo=0, AquaciseNo=0, ZumbaNo=0;
-    static int bookYogaNo=0, bookRunningNo=0, bookBodyFitNo=0, bookBodyBlitzNo=0, bookAquaciseNo=0, bookZumbaNo=0;
-    static int sumYogaNo=0, sumRunningNo=0, sumBodyFitNo=0, sumBodyBlitzNo=0, sumAquaciseNo=0, sumZumbaNo=0;
-    static int hiYogaNo=0, hiRunningNo=0, hiBodyFitNo=0, hiBodyBlitzNo=0, hiAquaciseNo=0, hiZumbaNo=0;
-    Scanner o = new Scanner(System.in);
 
+    Scanner o = new Scanner(System.in);
 
     void WeeksReport() {
 
@@ -45,8 +41,12 @@ public class monthlyReport {
         }
     }
 
-    void fourWeeksReport()
+   static void fourWeeksReport()
     {
+         int YogaNo=0, RunningNo=0, BodyFitNo=0, BodyBlitzNo=0, AquaciseNo=0, ZumbaNo=0;
+      int bookYogaNo=0, bookRunningNo=0, bookBodyFitNo=0, bookBodyBlitzNo=0, bookAquaciseNo=0, bookZumbaNo=0;
+        int sumYogaNo=0, sumRunningNo=0, sumBodyFitNo=0, sumBodyBlitzNo=0, sumAquaciseNo=0, sumZumbaNo=0;
+        int hiYogaNo=0, hiRunningNo=0, hiBodyFitNo=0, hiBodyBlitzNo=0, hiAquaciseNo=0, hiZumbaNo=0;
         System.out.println("******Four Weekends Report******");
         for(int i=0;i<attendLessons.length;i++)
         {
@@ -131,52 +131,49 @@ public class monthlyReport {
 
     }
 
-
-    void championExerciseReport()
+    static void championExerciseReport()
     {
-        for(int i=0;i<attendLessons.length;i++)
+
+        int bookYogaNo=0, bookRunningNo=0, bookBodyFitNo=0, bookBodyBlitzNo=0, bookAquaciseNo=0, bookZumbaNo=0;
+        int hiYogaNo=0, hiRunningNo=0, hiBodyFitNo=0, hiBodyBlitzNo=0, hiAquaciseNo=0, hiZumbaNo=0;
+
+        for(int i=0;i< bookedLessons.length;i++)
         {
-            for(int j=0;j<attendLessons[i].length;j++)
+            for(int j=0;j<bookedLessons[i].length;j++)
             {
-                if(attendLessons[i][j].equals("YOGA"))
+                if(bookedLessons[i][j].equals("YOGA"))
                 {
-                    sumYogaNo+=Integer.parseInt(ratingLessons[i][j]);
-                    YogaNo++;
+                    bookYogaNo++;
                 }
-                if(attendLessons[i][j].equals("RUNNING"))
+                if(bookedLessons[i][j].equals("RUNNING"))
                 {
-                    sumRunningNo+=Integer.parseInt(ratingLessons[i][j]);
-                    RunningNo++;
+                    bookRunningNo++;
                 }
-                if(attendLessons[i][j].equals("BODY FIT"))
+                if(bookedLessons[i][j].equals("BODY FIT"))
                 {
-                    sumBodyFitNo+=Integer.parseInt(ratingLessons[i][j]);
-                    BodyFitNo++;
+                    bookBodyFitNo++;
                 }
-                if(attendLessons[i][j].equals("BODY BLITZ"))
+                if(bookedLessons[i][j].equals("BODY BLITZ"))
                 {
-                    sumBodyBlitzNo+=Integer.parseInt(ratingLessons[i][j]);
-                    BodyBlitzNo++;
+                    bookBodyBlitzNo++;
                 }
-                if(attendLessons[i][j].equals("AQUACISE"))
+                if(bookedLessons[i][j].equals("AQUACISE"))
                 {
-                    sumAquaciseNo+=Integer.parseInt(ratingLessons[i][j]);
-                    AquaciseNo++;
+                    bookAquaciseNo++;
                 }
-                if(attendLessons[i][j].equals("ZUMBA"))
+                if(bookedLessons[i][j].equals("ZUMBA"))
                 {
-                    sumZumbaNo+=Integer.parseInt(ratingLessons[i][j]);
-                    ZumbaNo++;
+                    bookZumbaNo++;
                 }
 
             }
         }
-        hiYogaNo=price[0]*YogaNo;
-        hiRunningNo=price[1]*RunningNo;
-        hiBodyFitNo=price[2]*BodyFitNo;
-        hiBodyBlitzNo=price[3]*BodyBlitzNo;
-        hiAquaciseNo=price[4]*AquaciseNo;
-        hiZumbaNo=price[5]*ZumbaNo;
+        hiYogaNo=price[0]*bookYogaNo;
+        hiRunningNo=price[1]*bookRunningNo;
+        hiBodyFitNo=price[2]*bookBodyFitNo;
+        hiBodyBlitzNo=price[3]*bookBodyBlitzNo;
+        hiAquaciseNo=price[4]*bookAquaciseNo;
+        hiZumbaNo=price[5]*bookZumbaNo;
         //Array List
         ArrayList<Integer> income = new ArrayList<Integer>();
         income.add(hiYogaNo);

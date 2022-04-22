@@ -10,7 +10,7 @@ class Price {
 
     static int[] price = new int[]{50, 10, 20, 40, 25, 30};
 
-    void prices()
+    static void prices()
     {
         for (int i=0; i<6; i++)
         {
