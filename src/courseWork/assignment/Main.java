@@ -21,12 +21,13 @@ class Price {
 
 public class Main {
 
+static int weekPass=0;
     static int studentI=9;
 
     public static void main(String[] args) {
         Scanner o = new Scanner(System.in);
         // write your code here
-        System.out.println("\n\n********Management System********");
+        System.out.println("********Management System********");
         System.out.println("\n********Select the Option********");
 
         while(true) {

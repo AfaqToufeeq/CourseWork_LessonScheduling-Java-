@@ -279,11 +279,6 @@ public class LessonBook {
                     t.selectTimeTable();
                 }
             }
-//
-//        else
-//        {
-//            System.out.println("WRONG INPUT!!!");
-//        }
         mainMenuAttend();
 
     }

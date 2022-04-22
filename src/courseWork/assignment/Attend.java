@@ -3,6 +3,7 @@ package courseWork.assignment;
 import java.util.Scanner;
 
 import static courseWork.assignment.Index.*;
+import static courseWork.assignment.Main.weekPass;
 
 
 public class Attend {
@@ -118,8 +119,20 @@ public class Attend {
                     ratingLessons[a][0]=attendLessons[Index.a][0];
                     ratingLessons[Index.a][rr]= String.valueOf(rating);
                     rr++;
-
                     System.out.println("Rating and Reviews Completed");
+
+                    System.out.println("\npress y if one week is passed, or if not then Press any key: ");
+                    char opt = r.next().charAt(0);
+                    if (opt == 'y'){
+                        weekPass++;
+                        if(weekPass==4)
+                        {
+                            monthlyReport.fourWeeksReport();
+                        }
+                    }
+                    else {
+                        weekPass++;
+                    }
                     System.out.println("\n********Select Options********");
                     while (true)
                     {

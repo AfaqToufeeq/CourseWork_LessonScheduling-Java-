@@ -41,8 +41,6 @@ public class changeBooking {
     }
 
     void bookingChange() {
-
-
         int z=0;
         for (int i=a;i<a+1;i++)
         {
