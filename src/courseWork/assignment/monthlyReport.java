@@ -1,6 +1,5 @@
 package courseWork.assignment;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -130,7 +129,61 @@ public class monthlyReport {
         System.out.println();
 
     }
+    public static int maxIncome()
+    {
 
+        int bookYogaNo=0, bookRunningNo=0, bookBodyFitNo=0, bookBodyBlitzNo=0, bookAquaciseNo=0, bookZumbaNo=0;
+        int hiYogaNo=0, hiRunningNo=0, hiBodyFitNo=0, hiBodyBlitzNo=0, hiAquaciseNo=0, hiZumbaNo=0;
+
+        for(int i=0;i< bookedLessons.length;i++)
+        {
+            for(int j=0;j<bookedLessons[i].length;j++)
+            {
+                if(bookedLessons[i][j].equals("YOGA"))
+                {
+                    bookYogaNo++;
+                }
+                if(bookedLessons[i][j].equals("RUNNING"))
+                {
+                    bookRunningNo++;
+                }
+                if(bookedLessons[i][j].equals("BODY FIT"))
+                {
+                    bookBodyFitNo++;
+                }
+                if(bookedLessons[i][j].equals("BODY BLITZ"))
+                {
+                    bookBodyBlitzNo++;
+                }
+                if(bookedLessons[i][j].equals("AQUACISE"))
+                {
+                    bookAquaciseNo++;
+                }
+                if(bookedLessons[i][j].equals("ZUMBA"))
+                {
+                    bookZumbaNo++;
+                }
+
+            }
+        }
+        hiYogaNo=price[0]*bookYogaNo;
+        hiRunningNo=price[1]*bookRunningNo;
+        hiBodyFitNo=price[2]*bookBodyFitNo;
+        hiBodyBlitzNo=price[3]*bookBodyBlitzNo;
+        hiAquaciseNo=price[4]*bookAquaciseNo;
+        hiZumbaNo=price[5]*bookZumbaNo;
+        //Array List
+        ArrayList<Integer> income = new ArrayList<Integer>();
+        income.add(hiYogaNo);
+        income.add(hiRunningNo);
+        income.add(hiBodyFitNo);
+        income.add(hiBodyBlitzNo);
+        income.add(hiAquaciseNo);
+        income.add(hiZumbaNo);
+        Integer max = Collections.max(income);
+        return max;
+
+    }
     static void championExerciseReport()
     {
 
@@ -218,7 +271,6 @@ public class monthlyReport {
             System.out.println("-->> ZUMBA Lessons Generated the highest Income, almost "+hiZumbaNo+"$");
         }
         System.out.println();
-
 
     }
 }

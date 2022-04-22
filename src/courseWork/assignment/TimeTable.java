@@ -97,6 +97,48 @@ public class TimeTable {
         System.out.println();
 
     }
+    static void myReviewsLessons() {
+        for(int i=0;i<reviewsLessons.length;i++)
+        {
+            for(int j=0;j< reviewsLessons[i].length;j++)
+            {
+
+                if(j==0)
+                {
+                    System.out.println("********Reviews Lessons By********");
+                    System.out.print("Name: ");
+                }
+                if(!reviewsLessons[i][j].equals("null"))
+                {
+                    System.out.println(reviewsLessons[i][j]);
+                }
+
+            }
+        }
+        System.out.println();
+
+    }
+    static void myRatingsLessons() {
+        for(int i=0;i<ratingLessons.length;i++)
+        {
+            for(int j=0;j< ratingLessons[i].length;j++)
+            {
+
+                if(j==0)
+                {
+                    System.out.println("********Ratings Lessons By********");
+                    System.out.print("Name: ");
+                }
+                if(!ratingLessons[i][j].equals("null"))
+                {
+                    System.out.println(ratingLessons[i][j]);
+                }
+
+            }
+        }
+        System.out.println();
+
+    }
 
     void byDay(){
         while(true) {

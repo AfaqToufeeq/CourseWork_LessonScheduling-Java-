@@ -63,7 +63,21 @@ public class Index {
             {"null","null","null","null","null","null","null","null"}
     };
 
-    static String[][] reviewsLessons= new String[40][40];
+    static String[][] reviewsLessons={
+            {"Rehan","That's Good", "Nice","Excellent"},
+            {"Alex" ,"yeah it was good", "Not bad at all","Not Good"},
+            {"Jerry" ,"Fine","Excellent", "Just okay","It was outstanding","fine","that's ok"},
+            {"Malik","poor","good","nice"},
+            {"Peter","not poor", "Excellent","Fab"},
+            {"Sheikh","Pumped me"},
+            {"Andrew","Keepp going please","need to improve alot"},
+            {"Katty","O yeah! It was fantastic","Nice"},
+            {"Sarah","Great","Good"},
+            {"Yama","Great"},
+            {"null","null","null","null","null","null","null","null"}
+    };
+
+
 
     static String[][] ratingLessons=  {
             {"Rehan","5", "4","5"},

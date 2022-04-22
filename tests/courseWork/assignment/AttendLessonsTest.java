@@ -10,4 +10,9 @@ public class AttendLessonsTest {
     public void myAttendLessons() {
         TimeTable.myAttendLessons();
     }
+
+    @Test
+    public void allStudentsInfo() {
+        Attend.allStudentData();
+    }
 }
