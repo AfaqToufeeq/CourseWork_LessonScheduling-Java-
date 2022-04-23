@@ -1,5 +1,6 @@
 package courseWork.assignment;
 
+import javax.annotation.processing.SupportedSourceVersion;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
@@ -287,11 +288,12 @@ public class LessonBook {
     void mainMenuAttend()
     {
         System.out.println("1: TO CHANGE BOOKING ");
-        System.out.println("2: TO BOOK LESSON ");
-        System.out.println("3: TO ATTEND LESSON ");
-        System.out.println("4: Monthly Lesson Report ");
-        System.out.println("5: Monthly Champion Exercise Report ");
-        System.out.println("6: Exit ");
+        System.out.println("2: TO CANCEL BOOKING ");
+        System.out.println("3: TO BOOK LESSON ");
+        System.out.println("4: TO ATTEND LESSON ");
+        System.out.println("5: Monthly Lesson Report ");
+        System.out.println("6: Monthly Champion Exercise Report ");
+        System.out.println("7: Exit ");
         System.out.print("choose an option: ");
         Scanner a = new Scanner(System.in);
         int c=a.nextInt();
@@ -300,26 +302,99 @@ public class LessonBook {
            changebook.changeBookingLesson();
         }
         else if (c==2){
-            t.selectTimeTable();
+            System.out.println("DO YOU REALLY WANT TO CANCEL BOOKING? ");
+            Scanner ip= new Scanner(System.in);
+
+            System.out.println("press y for yes, and n to go to main menu: ");
+            char opt = ip.next().charAt(0);
+            if (opt == 'y'){
+                cancelBooking();
+            }
+            else if(opt == 'n'){
+                mainMenuAttend();
+            }
+            else{
+                System.out.println("WRONG INPUT");
+                mainMenuAttend();
+
+            }
         }
         else if(c==3){
+            t.selectTimeTable();
+        }
+        else if(c==4){
             Attend attend = new Attend();
             attend.attendLesson();
         }
-        else if(c==4){
+        else if(c==5){
             monthlyReport mR= new monthlyReport();
             mR.WeeksReport();
         }
-        else if(c==5){
+        else if(c==6){
             monthlyReport mR2= new monthlyReport();
             mR2.championExerciseReport();
         }
-        else if(c==6){
-           System.exit(0);
+        else if(c==7){
+            System.exit(0);
         }
         else{
             System.out.println("Wrong INPUT!!!");
+            mainMenuAttend();
+        }
+    }
+
+     void cancelBooking() {
+         int z=0;
+         for (int i=a;i<a+1;i++)
+         {
+             for(int j=0;j<bookedLessons[i].length;j++)
+             {
+                 if(j==0){
+                     System.out.println("Lessons Booked by Mr."+bookedLessons[i][j]+" are:");
+                     System.out.println("\nBooking ID : Booked Lessons");
+                 }
+                 if(j!=0)
+                 {
+                     if(bookedLessons[i][j]!="null")
+                     {
+                         z++;
+                         System.out.println(z+": "+bookedLessonsID[i][j]+" : "+bookedLessons[i][j]);
+                     }
+
+                 }
+             }
+         }
+
+
+
+    int p=0;
+    System.out.print("Enter Booking ID of lesson you wanna change: ");
+         Scanner scan = new Scanner(System.in);
+   String atp=scan.next();
+
+   for (int k=a;k<a+1;k++)
+    {
+        for (int j=0;j<bookedLessons[k].length;j++)
+        {
+            if(bookedLessonsID[k][j].equals(atp))
+            {p=1;
+                bookedLessonsID[k][j]="null";
+                bookedLessons[k][j]="null";
+                students[k][j+1]="null";
+
+                System.out.println("Status: Cancelled\n");
+                mainMenuAttend();
+            }
 
         }
     }
+            if(p==0)
+    {
+        System.out.println("\nError-->This Booking ID doesn't exist");
+        System.out.println("Try Again...\n");
+       cancelBooking();
+    }
+            System.out.println();
+
+}
 }

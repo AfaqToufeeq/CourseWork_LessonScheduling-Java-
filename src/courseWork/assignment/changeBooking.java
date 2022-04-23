@@ -17,7 +17,7 @@ public class changeBooking {
    {
        while(true) {
            System.out.println("1: To Change Booking");
-           System.out.println("2: To Cancel Booking Change");
+           System.out.println("2: return to menu");
 
            System.out.print("Choose an option: ");
            int option = scan.nextInt();
@@ -27,7 +27,6 @@ public class changeBooking {
                    break;
 
                case 2:
-                   System.out.println("Booking Change is Cancelled");
                    LessonBook lessonBook= new LessonBook();
                    lessonBook.mainMenuAttend();
                    break;

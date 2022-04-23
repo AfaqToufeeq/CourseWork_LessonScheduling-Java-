@@ -35,6 +35,12 @@ public class Attend {
                }
            }
        }
+       if (z==0)
+       {
+           System.out.println("You've not booked any lesson, please book any lesson\n");
+           TimeTable timeTable= new TimeTable();
+           timeTable.selectTimeTable();
+       }
 
         System.out.println("Enter A Lesson Name TO ATTEND IT (BODY BLITZ):");
 
