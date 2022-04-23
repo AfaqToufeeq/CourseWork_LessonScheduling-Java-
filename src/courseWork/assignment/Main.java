@@ -19,6 +19,7 @@ class Price {
     }
 }
 
+
 public class Main {
 
 static int weekPass=0;

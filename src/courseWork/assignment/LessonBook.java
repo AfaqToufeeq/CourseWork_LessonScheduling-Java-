@@ -15,6 +15,7 @@ public class LessonBook {
     TimeTable t = new TimeTable();
     void booking()
     {
+        sYoga=0;sRunning=0;sBodyFit=0;sBodyBlitz=0; sAquacise=0; sZumba=0;
         Scanner o = new Scanner(System.in);
         System.out.println("ENTER A NUMBER TO BOOK RESPECTIVE LESSON: ");
         int bookLesson = o.nextInt();
